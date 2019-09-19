@@ -1,0 +1,40 @@
+.box-game-color {
+  color: #f2c94c;
+}
+
+.box-watch-color {
+  color: #e0e0e0;
+}
+
+.box-1,
+.box-4,
+.box-7 {
+	border-left: 5px solid;
+	border-right: 5px solid;
+}
+
+.box-3,
+.box-4,
+.box-5 {
+  border-top: 5px solid;
+	border-bottom: 5px solid;
+}
+
+.box{
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+}
+
+.cross {
+  background: url('./cross.JPG') center no-repeat;
+}
+
+.zero {
+  background: url('./zero.JPG') center no-repeat;
+}
+
+.zero-grey {
+  background: url('./grey-zero.JPG') center no-repeat;
+}

@@ -1,0 +1,33 @@
+
+.player-container {
+  display: inline-flex;
+  box-sizing: border-box;
+  margin: 15px;
+  align-items: center;
+  width: fit-content; 
+}
+
+.player-X,
+.player-O {
+  margin: 5px;
+  font-size: 20px;
+}
+
+.player-X-image {
+  background: url('./cross-small.JPG') center no-repeat;
+}
+.player-O-image  {
+  background: url('./zero-small.JPG') center no-repeat;
+}
+
+.hide {
+  display: none;
+} 
+
+.underLine {
+  border-bottom: 2px solid;
+}
+
+.watch-style {
+  color: #bdbdbd;
+}
