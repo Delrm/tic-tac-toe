@@ -11,7 +11,7 @@ const CreateGame = ({ playerName }) => {
           playerName
         }
       }}
-      style={{ textDecoration: 'none' }}>
+      className='link-style'>
         <div className="add-button">
           +
         </div>

@@ -39,7 +39,7 @@ export default class GameList extends Component {
             playerName: this.props.playerName
           }
         }}
-        style={{ textDecoration: 'none' }}>
+        className='link-style'>
           <GameListItem 
             id={ id }
             { ...itemProps }/>

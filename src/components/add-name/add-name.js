@@ -17,10 +17,7 @@ export default class AddName extends Component {
     e.preventDefault()
 
     const { playerName } = this.state
-
-    const cb = this.props.onPlayerNameChange
-
-    cb(playerName)
+    this.props.onPlayerNameChange(playerName)
   };
 
   render() {

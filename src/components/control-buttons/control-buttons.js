@@ -9,13 +9,17 @@ const ControlButtons = ({ winner, playerStatus, gameStatus, surrenderToggle }) =
                       <button className='buttons'>BACK</button>
                     </Link>
 
-  const controlButton = () => {
-    if(gameStatus === 'pending' || winner 
-      || playerStatus === 'watch') {
+  const checkGameStatus = (gameStatus) => {
+    if(gameStatus === 'pending' || winner ||
+    playerStatus === 'watch') {
       return backButton
     }
 
     return surrenderButton
+  }
+
+  const controlButton = () => {
+    return checkGameStatus(gameStatus)
   }
 
   return (
