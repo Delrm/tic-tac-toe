@@ -23,9 +23,9 @@ const ControlButtons = ({ winner, playerStatus, gameStatus, surrenderToggle }) =
   }
 
   return (
-    <>
+    <div>
       { controlButton() }
-    </>
+    </div>
   )
 }
 

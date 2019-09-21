@@ -1,3 +1,13 @@
+.board{
+  position: absolute;
+  top: 17%;
+  left: 20%;
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 320px;
+}
+
 .box-game-color {
   color: #f2c94c;
 }

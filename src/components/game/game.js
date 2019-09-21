@@ -190,7 +190,7 @@ class Game extends Component {
     
     return (
       <div className="container">
-        <div className='players-box'>
+        <div>
           <PlayersNames 
             creator={ creator }
             opponent={ opponent }
@@ -206,7 +206,7 @@ class Game extends Component {
             winner={ winner }
           />
         </div>
-        <div className="board">
+        <div>
           <CreateBox 
             playerStatus={ this.playerStatus }
             board={ board }

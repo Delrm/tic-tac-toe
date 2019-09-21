@@ -20,9 +20,9 @@ const CreateBox = ({ playerStatus, board, turn, boxClick }) => {
   })
   
   return (
-    <>
+    <div className='board'>
       { boxElements }
-    </>
+    </div>
   )
 }
 

@@ -1,3 +1,7 @@
+.players-box {
+  display: flex;
+  justify-content: space-between;
+}
 
 .player-container {
   display: inline-flex;

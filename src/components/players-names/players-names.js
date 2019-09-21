@@ -8,7 +8,7 @@ const PlayersNames = ({ creator, opponent, turn, winner, playerStatus }) => {
   const styleWatch = playerStatus === 'watch' ? 'watch-style':null
   
   return (
-    <>
+    <div className='players-box'>
       <div className={`player-container ${styleWatch} ${creator ? (turn === 'X' && !winner) ? 'underLine':null:'hide'} `}>
         <div className='player-X'>{ creator }</div>
         <img src={ crossSmall }></img>
@@ -17,7 +17,7 @@ const PlayersNames = ({ creator, opponent, turn, winner, playerStatus }) => {
       <img src={ styleWatch ?  greySmallZero:zeroSmall }></img>
         <div className='player-O' >{ opponent }</div>
       </div>
-    </>
+    </div>
   )
 }
 

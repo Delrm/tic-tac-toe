@@ -6,9 +6,9 @@ const WinnerPlayer = ({ creator, opponent, winner }) => {
     ? <h2>Winner is {creator}</h2>:<h2>Winner is {opponent}</h2>:null
 
   return (
-    <>
+    <div>
       { getWinner() }
-    </>
+    </div>
   )
 }
 
