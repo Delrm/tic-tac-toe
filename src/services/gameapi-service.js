@@ -20,4 +20,8 @@ export default class GameapiService {
   
     return gameList
   }
+
+  removeGame = (id) => {
+    return localStorage.removeItem(id)
+  }
 }

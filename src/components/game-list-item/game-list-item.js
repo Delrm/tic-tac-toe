@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import Timer from '../timer'
+import GameapiService from '../../services/gameapi-service'
 import './game-list-item.css';
 
 export default class GameListItem extends Component {
 
+  gameapiService = new GameapiService()
+
   gameDataClear() {
-    this.clearGame = setTimeout(() => localStorage.removeItem(this.props.id), 300 * 1000)
+    this.clearGame = setTimeout(() => this.gameapiService.removeGame(this.props.id), 300*1000)
   }
 
   componentWillUnmount() {
@@ -14,14 +17,14 @@ export default class GameListItem extends Component {
   
   render() {
     const { gameStatus, creator, opponent, winner, timer } = this.props
-    const gameDataClear = winner ? this.gameDataClear():null
+    const gameClear = winner ? this.gameDataClear():null
     const styleLineSquare = (gameStatus === 'playing' || gameStatus === 'over') 
     ? 'border-line':null
     const winnerStyle = winner ? 'winner':null
 
     return (
       <div className={`container-square ${gameStatus}`}>
-        { gameDataClear }
+        { gameClear }
         <div className={`player-square ${styleLineSquare} ${winner === 'X' ? winnerStyle:null}`}>{ creator }</div>
         <div className={`player-square ${winner === 'O' ? winnerStyle:null}`}>{ opponent }</div>
         <div className='timer-square'>

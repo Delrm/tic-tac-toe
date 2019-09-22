@@ -29,16 +29,14 @@ class Game extends Component {
   componentDidMount() {
     this.setGame()
       .then(() => this.gameapiService.setData(this.state.id, this.state))
-      
+
     this.timerID = setInterval(
-      () => this.gameapiService.getData(this.state.id)
-        .then((data) => {
-          this.checkGameActivity(data)
-          this.setState({...data})
-            
-          this.setTimer()
-        }), 1000
-      )
+      async () => {
+        let data = await this.gameapiService.getData(this.state.id)
+        this.checkGameActivity(data)
+        this.setState({...data})
+        this.setTimer()
+      }, 1000)
 
     this.resetTimerClearGame()
   }
@@ -123,7 +121,7 @@ class Game extends Component {
   }
 
   clearGame() {
-    localStorage.removeItem(this.state.id)
+    this.gameapiService.removeGame(this.state.id)
     this.props.history.push('/')
   }
 
