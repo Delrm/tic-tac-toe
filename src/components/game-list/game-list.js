@@ -13,10 +13,11 @@ export default class GameList extends Component {
   }
 
   componentDidMount() {
-    this.gameListTimer = setInterval(() => {
-        this.gameapiService.getGameList()
-          .then((gameList) => this.setState({ gameList }))
-    }, 2000)
+    this.gameListTimer = setInterval(
+      async () => {
+        let gameList = await this.gameapiService.getGameList()
+        this.setState({ gameList })
+    }, 1000)
   }
 
   componentWillUnmount() {

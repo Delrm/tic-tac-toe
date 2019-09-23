@@ -4,9 +4,8 @@ export default class GameapiService {
     return data
   }
 
-  setData = async (id, state) => {
+  setData = (id, state) => {
     localStorage.setItem(id, JSON.stringify(state))
-    return id
   }
   
   getGameList = async () => {

@@ -156,6 +156,11 @@ class Game extends Component {
             gameStatus: 'over',
             winner: this.state.turn,
           })
+        } else if(!board.some((element) => !element)) {
+          this.setState({
+            gameStatus: 'over',
+            winner: 'draw',
+          })
         }
       })
   }
